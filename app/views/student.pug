@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='utf-8')
+        title Student
+    body
+        table
+            tr
+                th Student ID
+                th Firstname
+                th Lastname
+                th grade
+            each val in students
+                tr
+                    td= val.sid
+                    td= val.fname
+                    td= val.lname
+                    td= val.grade
+        form(method='post', action='student')
+            p
+                input(name='sid', type='number', placeholder='SID')
+            p
+                input(name='fname', type='text', placeholder='Firstname')
+            p
+                input(name='lname', type='text', placeholder='Lastname')
+            p
+                input(name='grade', type='number', step='any', placeholder='grade')
+            button(type='submit') Add
